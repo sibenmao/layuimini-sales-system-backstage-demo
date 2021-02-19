@@ -54,7 +54,7 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
                     // 写死 logo 数据
                     data.logoInfo = {
                         title: '中誉鼎力',
-                        image: 'images/logo.png',
+                        image: 'images/logo-min.jpg',
                         href: '',
                     };
                     // 临时写死 home 导航数据
