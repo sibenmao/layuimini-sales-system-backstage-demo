@@ -1,18 +1,4 @@
 {
-    "homeInfo": {
-        "title": "首页",
-        "href": "page/welcome-2.html?t=2"
-    },
-    "logoInfo": {
-        "title": "中誉鼎力",
-        "image": "images/logo.png",
-        "href": ""
-    },
-    "loginInfo": {
-        "title": "中誉鼎力",
-        "image": "images/logo.png",
-        "href": ""
-    },
     "menuInfo": [
         {
             "title": "销售管理",

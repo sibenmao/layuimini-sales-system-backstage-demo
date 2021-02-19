@@ -51,9 +51,9 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
                         window.location = 'page/login-3.html';
                         return;
                     }
-                    miniAdmin.renderLogo(data.logoInfo);
+                    miniAdmin.renderLogo();
                     miniAdmin.renderClear(options.clearUrl);
-                    miniAdmin.renderHome(data.homeInfo);
+                    miniAdmin.renderHome();
                     miniAdmin.renderAnim(options.pageAnim);
                     miniAdmin.listen();
                     miniMenu.render({
@@ -68,7 +68,7 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
                         menuChildOpen: options.menuChildOpen,
                         maxTabNum: options.maxTabNum,
                         menuList: data.menuInfo,
-                        homeInfo: data.homeInfo,
+                        // homeInfo: data.homeInfo,
                         listenSwichCallback: function () {
                             miniAdmin.renderDevice();
                         },
@@ -88,8 +88,8 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
          * 初始化logo
          * @param data
          */
-        renderLogo: function (data) {
-            var html = '<a href="' + data.href + '"><img src="' + data.image + '" alt="logo"><h1>' + data.title + '</h1></a>';
+        renderLogo: function () {
+            var html = '<a href="javascript:;"><img src="images/logo.png" alt="logo"><h1>中誉鼎力</h1></a>';
             $('.layuimini-logo').html(html);
         },
 
@@ -97,16 +97,16 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
          * 初始化首页
          * @param data
          */
-        renderHome: function (data) {
-            sessionStorage.setItem('layuiminiHomeHref', data.href);
+        renderHome: function () {
+            sessionStorage.setItem('layuiminiHomeHref', 'page/welcome-2.html?t=2');
             $('#layuiminiHomeTabId').html(
                 '<span class="layuimini-tab-active"></span><span class="disable-close">' +
-                    data.title +
+                    '首页' +
                     '</span><i class="layui-icon layui-unselect layui-tab-close">ဆ</i>'
             );
-            $('#layuiminiHomeTabId').attr('lay-id', data.href);
+            $('#layuiminiHomeTabId').attr('lay-id', 'page/welcome-2.html?t=2');
             $('#layuiminiHomeTabIframe').html(
-                '<iframe width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"  src="' + data.href + '"></iframe>'
+                '<iframe width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"  src="page/welcome-2.html?t=2"></iframe>'
             );
         },
 
