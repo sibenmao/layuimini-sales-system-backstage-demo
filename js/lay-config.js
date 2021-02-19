@@ -9,7 +9,6 @@ window.rootPath = (function (src) {
     src = document.scripts[document.scripts.length - 1].src;
     return src.substring(0, src.lastIndexOf('/') + 1);
 })();
-console.log(window.rootPath, 'window.rootPath');
 layui
     .config({
         base: rootPath + 'lay-module/',

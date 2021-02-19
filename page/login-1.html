@@ -109,7 +109,7 @@
                 <div class="layui-form login-form">
                     <form class="layui-form" action="">
                         <div class="layui-form-item logo-title">
-                            <h1>LayuiMini后台登录</h1>
+                            <h1>欢迎登录</h1>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-icon layui-icon-username" for="username"></label>
@@ -135,7 +135,7 @@
                                 value="123456"
                             />
                         </div>
-                        <div class="layui-form-item">
+                        <!-- <div class="layui-form-item">
                             <label class="layui-icon layui-icon-vercode" for="captcha"></label>
                             <input
                                 type="text"
@@ -149,7 +149,7 @@
                             <div class="captcha-img">
                                 <img id="captchaPic" src="../images/captcha.jpg" />
                             </div>
-                        </div>
+                        </div> -->
                         <div class="layui-form-item">
                             <input type="checkbox" name="rememberMe" value="true" lay-skin="primary" title="记住密码" />
                         </div>
@@ -196,6 +196,7 @@
                     }
                     layer.msg('登录成功', function () {
                         window.location = '../index.html';
+                        layui.data('zydl_token_key', { key: 'zydl_token_key', value: '9527' });
                     });
                     return false;
                 });

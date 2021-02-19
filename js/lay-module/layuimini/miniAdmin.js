@@ -4,6 +4,7 @@
  * version:2.0
  * description:layuimini 主体框架扩展
  */
+
 layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function (exports) {
     var $ = layui.$,
         layer = layui.layer,
@@ -11,7 +12,6 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
         miniTheme = layui.miniTheme,
         element = layui.element,
         miniTab = layui.miniTab;
-
     if (!/http(s*):\/\//.test(location.href)) {
         var tips = '请先将项目部署至web容器（Apache/Tomcat/Nginx/IIS/等），否则部分数据将无法显示';
         return layer.alert(tips);
@@ -44,16 +44,27 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
                 if (data == null) {
                     miniAdmin.error('暂无菜单信息');
                 } else {
-                    // 验证 token
-                    var keyInfo = layui.data('zydl_token_key');
-                    console.log(keyInfo.zydl_token_key, 'keyInfo.zydl_token_key');
-                    if (!keyInfo['zydl_token_key']) {
-                        window.location = 'page/login-3.html';
+                    var tokenKey = 'zydl_token_key';
+                    // token 验证
+                    var keyInfo = layui.data(tokenKey);
+                    if (!keyInfo[tokenKey]) {
+                        window.location = 'page/login-1.html';
                         return;
                     }
-                    miniAdmin.renderLogo();
+                    // 写死 logo 数据
+                    data.logoInfo = {
+                        title: '中誉鼎力',
+                        image: 'images/logo.png',
+                        href: '',
+                    };
+                    // 临时写死 home 导航数据
+                    data.homeInfo = {
+                        title: '首页',
+                        href: 'page/welcome-2.html?t=2',
+                    };
+                    miniAdmin.renderLogo(data.logoInfo);
                     miniAdmin.renderClear(options.clearUrl);
-                    miniAdmin.renderHome();
+                    miniAdmin.renderHome(data.homeInfo);
                     miniAdmin.renderAnim(options.pageAnim);
                     miniAdmin.listen();
                     miniMenu.render({
@@ -68,7 +79,7 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
                         menuChildOpen: options.menuChildOpen,
                         maxTabNum: options.maxTabNum,
                         menuList: data.menuInfo,
-                        // homeInfo: data.homeInfo,
+                        homeInfo: data.homeInfo,
                         listenSwichCallback: function () {
                             miniAdmin.renderDevice();
                         },
@@ -88,8 +99,8 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
          * 初始化logo
          * @param data
          */
-        renderLogo: function () {
-            var html = '<a href="javascript:;"><img src="images/logo.png" alt="logo"><h1>中誉鼎力</h1></a>';
+        renderLogo: function (data) {
+            var html = '<a href="' + data.href + '"><img src="' + data.image + '" alt="logo"><h1>' + data.title + '</h1></a>';
             $('.layuimini-logo').html(html);
         },
 
@@ -97,16 +108,16 @@ layui.define(['jquery', 'miniMenu', 'element', 'miniTab', 'miniTheme'], function
          * 初始化首页
          * @param data
          */
-        renderHome: function () {
-            sessionStorage.setItem('layuiminiHomeHref', 'page/welcome-2.html?t=2');
+        renderHome: function (data) {
+            sessionStorage.setItem('layuiminiHomeHref', data.href);
             $('#layuiminiHomeTabId').html(
                 '<span class="layuimini-tab-active"></span><span class="disable-close">' +
-                    '首页' +
+                    data.title +
                     '</span><i class="layui-icon layui-unselect layui-tab-close">ဆ</i>'
             );
-            $('#layuiminiHomeTabId').attr('lay-id', 'page/welcome-2.html?t=2');
+            $('#layuiminiHomeTabId').attr('lay-id', data.href);
             $('#layuiminiHomeTabIframe').html(
-                '<iframe width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"  src="page/welcome-2.html?t=2"></iframe>'
+                '<iframe width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"  src="' + data.href + '"></iframe>'
             );
         },
 

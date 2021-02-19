@@ -83,7 +83,93 @@
                             "target": "_self"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "title": "采购管理",
+            "icon": "fa fa-lemon-o",
+            "href": "",
+            "target": "_self",
+            "child": [
+                {
+                    "title": "供应商列表",
+                    "href": "page/table10.html",
+                    "icon": "fa fa-user-secret",
+                    "target": "_self"
                 },
+                {
+                    "title": "原料列表",
+                    "href": "page/table11.html",
+                    "icon": "fa fa-th-list",
+                    "target": "_self"
+                },
+                {
+                    "title": "订单列表",
+                    "href": "page/table12.html",
+                    "icon": "fa fa-list",
+                    "target": "_self"
+                },
+                {
+                    "title": "车辆列表",
+                    "href": "page/table13.html",
+                    "icon": "fa fa-truck",
+                    "target": "_self"
+                }
+            ]
+        },
+        {
+            "title": "库存管理",
+            "icon": "fa fa-slideshare",
+            "href": "",
+            "target": "_self",
+            "child": [
+                {
+                    "title": "仓库管理",
+                    "href": "page/table18.html",
+                    "icon": "fa fa-database",
+                    "target": "_self"
+                }
+            ]
+        },
+        {
+            "title": "系统设置",
+            "icon": "fa fa-slideshare",
+            "href": "",
+            "target": "_self",
+            "child": [
+                {
+                    "title": "账户管理",
+                    "href": "page/table14.html",
+                    "icon": "fa fa-users",
+                    "target": "_self"
+                },
+                {
+                    "title": "角色管理",
+                    "href": "page/table15.html",
+                    "icon": "fa fa-user-secret",
+                    "target": "_self"
+                },
+                {
+                    "title": "打印管理",
+                    "href": "page/table16.html",
+                    "icon": "fa fa-print",
+                    "target": "_self"
+                },
+                {
+                    "title": "厂区设置",
+                    "href": "page/table17.html",
+                    "icon": "fa fa-square-o",
+                    "target": "_self"
+                }
+            ]
+        },
+        {
+            "title": "模板参考",
+            "icon": "fa fa-address-book",
+            "href": "",
+            "target": "_self",
+            "child": [
                 {
                     "title": "主页模板",
                     "href": "",
@@ -106,44 +192,6 @@
                             "title": "主页三",
                             "href": "page/welcome-3.html",
                             "icon": "fa fa-tachometer",
-                            "target": "_self"
-                        }
-                    ]
-                },
-                {
-                    "title": "菜单管理",
-                    "href": "page/menu.html",
-                    "icon": "fa fa-window-maximize",
-                    "target": "_self"
-                },
-                {
-                    "title": "系统设置",
-                    "href": "page/setting.html",
-                    "icon": "fa fa-gears",
-                    "target": "_self"
-                },
-                {
-                    "title": "表格示例",
-                    "href": "page/table.html",
-                    "icon": "fa fa-file-text",
-                    "target": "_self"
-                },
-                {
-                    "title": "表单示例",
-                    "href": "",
-                    "icon": "fa fa-calendar",
-                    "target": "_self",
-                    "child": [
-                        {
-                            "title": "普通表单",
-                            "href": "page/form.html",
-                            "icon": "fa fa-list-alt",
-                            "target": "_self"
-                        },
-                        {
-                            "title": "分步表单",
-                            "href": "page/form-step.html",
-                            "icon": "fa fa-navicon",
                             "target": "_self"
                         }
                     ]
@@ -189,222 +237,10 @@
                     ]
                 },
                 {
-                    "title": "其它界面",
-                    "href": "",
-                    "icon": "fa fa-snowflake-o",
-                    "target": "",
-                    "child": [
-                        {
-                            "title": "按钮示例",
-                            "href": "page/button.html",
-                            "icon": "fa fa-snowflake-o",
-                            "target": "_self"
-                        },
-                        {
-                            "title": "弹出层",
-                            "href": "page/layer.html",
-                            "icon": "fa fa-shield",
-                            "target": "_self"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "采购管理",
-            "icon": "fa fa-lemon-o",
-            "href": "",
-            "target": "_self",
-            "child": [
-                {
-                    "title": "供应商列表",
-                    "href": "page/table10.html",
-                    "icon": "fa fa-user-secret",
-                    "target": "_self"
-                },
-                {
-                    "title": "原料列表",
-                    "href": "page/table11.html",
-                    "icon": "fa fa-th-list",
-                    "target": "_self"
-                },
-                {
-                    "title": "订单列表",
-                    "href": "page/table12.html",
-                    "icon": "fa fa-list",
-                    "target": "_self"
-                },
-                {
-                    "title": "车辆列表",
-                    "href": "page/table13.html",
-                    "icon": "fa fa-truck",
-                    "target": "_self"
-                },
-                {
                     "title": "图标列表",
                     "href": "page/icon.html",
                     "icon": "fa fa-dot-circle-o",
                     "target": "_self"
-                },
-                {
-                    "title": "图标选择",
-                    "href": "page/icon-picker.html",
-                    "icon": "fa fa-adn",
-                    "target": "_self"
-                },
-                {
-                    "title": "颜色选择",
-                    "href": "page/color-select.html",
-                    "icon": "fa fa-dashboard",
-                    "target": "_self"
-                },
-                {
-                    "title": "下拉选择",
-                    "href": "page/table-select.html",
-                    "icon": "fa fa-angle-double-down",
-                    "target": "_self"
-                },
-                {
-                    "title": "文件上传",
-                    "href": "page/upload.html",
-                    "icon": "fa fa-arrow-up",
-                    "target": "_self"
-                },
-                {
-                    "title": "富文本编辑器",
-                    "href": "page/editor.html",
-                    "icon": "fa fa-edit",
-                    "target": "_self"
-                },
-                {
-                    "title": "省市县区选择器",
-                    "href": "page/area.html",
-                    "icon": "fa fa-rocket",
-                    "target": "_self"
-                }
-            ]
-        },
-        {
-            "title": "库存管理",
-            "icon": "fa fa-slideshare",
-            "href": "",
-            "target": "_self",
-            "child": [
-                {
-                    "title": "仓库管理",
-                    "href": "page/table18.html",
-                    "icon": "fa fa-database",
-                    "target": "_self"
-                },
-                {
-                    "title": "多级菜单",
-                    "href": "",
-                    "icon": "fa fa-meetup",
-                    "target": "",
-                    "child": [
-                        {
-                            "title": "按钮1",
-                            "href": "page/button.html?v=1",
-                            "icon": "fa fa-calendar",
-                            "target": "_self",
-                            "child": [
-                                {
-                                    "title": "按钮2",
-                                    "href": "page/button.html?v=2",
-                                    "icon": "fa fa-snowflake-o",
-                                    "target": "_self",
-                                    "child": [
-                                        {
-                                            "title": "按钮3",
-                                            "href": "page/button.html?v=3",
-                                            "icon": "fa fa-snowflake-o",
-                                            "target": "_self"
-                                        },
-                                        {
-                                            "title": "表单4",
-                                            "href": "page/form.html?v=1",
-                                            "icon": "fa fa-calendar",
-                                            "target": "_self"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": "失效菜单",
-                    "href": "page/error.html",
-                    "icon": "fa fa-superpowers",
-                    "target": "_self"
-                }
-            ]
-        },
-        {
-            "title": "系统设置",
-            "icon": "fa fa-slideshare",
-            "href": "",
-            "target": "_self",
-            "child": [
-                {
-                    "title": "账户管理",
-                    "href": "page/table14.html",
-                    "icon": "fa fa-users",
-                    "target": "_self"
-                },
-                {
-                    "title": "角色管理",
-                    "href": "page/table15.html",
-                    "icon": "fa fa-user-secret",
-                    "target": "_self"
-                },
-                {
-                    "title": "打印管理",
-                    "href": "page/table16.html",
-                    "icon": "fa fa-print",
-                    "target": "_self"
-                },
-                {
-                    "title": "厂区设置",
-                    "href": "page/table17.html",
-                    "icon": "fa fa-square-o",
-                    "target": "_self"
-                },
-                {
-                    "title": "多级菜单",
-                    "href": "",
-                    "icon": "fa fa-meetup",
-                    "target": "",
-                    "child": [
-                        {
-                            "title": "按钮1",
-                            "href": "page/button.html?v=1",
-                            "icon": "fa fa-calendar",
-                            "target": "_self",
-                            "child": [
-                                {
-                                    "title": "按钮2",
-                                    "href": "page/button.html?v=2",
-                                    "icon": "fa fa-snowflake-o",
-                                    "target": "_self",
-                                    "child": [
-                                        {
-                                            "title": "按钮3",
-                                            "href": "page/button.html?v=3",
-                                            "icon": "fa fa-snowflake-o",
-                                            "target": "_self"
-                                        },
-                                        {
-                                            "title": "表单4",
-                                            "href": "page/form.html?v=1",
-                                            "icon": "fa fa-calendar",
-                                            "target": "_self"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
                 },
                 {
                     "title": "失效菜单",
