@@ -61,25 +61,25 @@
                 {
                     "title": "订单管理",
                     "href": "",
-                    "icon": "fa fa-square",
+                    "icon": "fa fa-reorder",
                     "target": "_self",
                     "child": [
                         {
                             "title": "预约订单",
                             "href": "page/table7.html",
-                            "icon": "fa fa-list",
+                            "icon": "fa fa-phone",
                             "target": "_self"
                         },
                         {
                             "title": "进行订单",
                             "href": "page/table8.html",
-                            "icon": "fa fa-money",
+                            "icon": "fa fa-building",
                             "target": "_self"
                         },
                         {
                             "title": "历史订单",
                             "href": "page/table9.html",
-                            "icon": "fa fa-clock-o",
+                            "icon": "fa fa-history",
                             "target": "_self"
                         }
                     ]
