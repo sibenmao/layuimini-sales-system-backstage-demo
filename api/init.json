@@ -237,6 +237,12 @@
                     ]
                 },
                 {
+                    "title": "菜单管理",
+                    "href": "page/menu.html",
+                    "icon": "fa fa-window-maximize",
+                    "target": "_self"
+                },
+                {
                     "title": "图标列表",
                     "href": "page/icon.html",
                     "icon": "fa fa-dot-circle-o",

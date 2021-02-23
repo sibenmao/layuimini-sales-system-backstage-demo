@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.5.7/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-form layuimini-form">
+        <div class="layui-form-item">
+            <!-- <label class="layui-form-label required">用户名</label> -->
+            <div class="layui-input-block" id="test1">
+                
+            </div>
+        </div>
+        <!-- <div id="test1"></div> -->
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/layui-v2.5.7/layui.js" charset="utf-8"></script>
+<!-- 模拟数据 -->
+<script src="../../api/mock/mock.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'tree'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            tree = layui.tree,
+            $ = layui.$;
+        //渲染
+        var inst1 = tree.render({
+            elem: '#test1'  //绑定元素
+            ,showCheckbox: true
+            ,data: treemock
+        });
+
+        // tree.setChecked('test1', [2, 3]);
+
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+
+                // 关闭弹出层
+                layer.close(index);
+
+                var iframeIndex = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(iframeIndex);
+
+            });
+
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

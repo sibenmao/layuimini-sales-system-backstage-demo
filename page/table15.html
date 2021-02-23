@@ -62,6 +62,7 @@
 
                 <script type="text/html" id="currentTableBar">
                     <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+                    <a class="layui-btn layui-btn-xs data-count-edit" lay-event="editTree">编辑权限</a>
                     <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
                 </script>
             </div>
@@ -99,7 +100,7 @@
                             { field: 'classify', width: 80, title: '职业' },
                             { field: 'wealth', width: 135, title: '财富', sort: true },
                             { field: 'sign', title: '签名', minWidth: 150 },
-                            { title: '操作', width: 120, toolbar: '#currentTableBar', align: 'center', fixed: 'right' },
+                            { title: '操作', width: 185, toolbar: '#currentTableBar', align: 'center', fixed: 'right' },
                         ],
                     ],
                     limits: [10, 15, 20, 25, 50, 100],
@@ -173,7 +174,7 @@
                             maxmin: true,
                             shadeClose: true,
                             area: ['100%', '100%'],
-                            content: '../page/table/edit.html',
+                            content: 'table/edit.html',
                         });
                         $(window).on('resize', function () {
                             layer.full(index);
@@ -184,6 +185,20 @@
                             obj.del();
                             layer.close(index);
                         });
+                    } else if (obj.event === 'editTree') {
+                        var index = layer.open({
+                            title: '编辑用户',
+                            type: 2,
+                            shade: 0.2,
+                            maxmin: true,
+                            shadeClose: true,
+                            area: ['50%', '100%'],
+                            content: 'table/tree.html',
+                        });
+                        $(window).on('resize', function () {
+                            layer.full(index);
+                        });
+                        return false;
                     }
                 });
             });
